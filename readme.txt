@@ -69,5 +69,8 @@ Screenshots is here：[http://www.wpzhiku.com/wizhi-submenus/](http://www.wpzhik
 
 == Changelog ==
 
+= 1.1 =
+* Add l10n support
+
 = 1.0 =
 * The first released

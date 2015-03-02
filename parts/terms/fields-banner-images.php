@@ -9,10 +9,10 @@ piklist(
 	'field', array(
 		'type'  => 'file'
 	, 'field'   => 'subimg'
-	, 'label'   => __( 'Set Banner Image', 'piklist' )
+	, 'label'   => __( 'Set Banner Image', 'wizhi' )
 	, 'options' => array(
-			'modal_title' => __( 'Set Banner Image', 'piklist' )
-		, 'button'        => __( 'Set Banner Image', 'piklist' )
+			'modal_title' => __( 'Set Banner Image', 'wizhi' )
+		, 'button'        => __( 'Set Banner Image', 'wizhi' )
 		)
 	)
 );
