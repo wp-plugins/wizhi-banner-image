@@ -4,11 +4,11 @@ Donate link:
 Tags: widget, menus
 Requires at least: 3.4
 Tested up to: 3.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Display diffrent banner images in page and taxonomy terms，为每个页面或分类显示一个banner背景图。
+Display diffrent banner images in page and taxonomy terms，为每个页面或分类显示一个banner图片。
 
 == Description ==
 
@@ -24,7 +24,7 @@ Display diffrent banner images in page and taxonomy terms。
 
 add the following code in header.php
 
-`<?php if ( function_exists ("the_banner_images") ) { the_banner_images(); } ?>`
+`<img src="<?php echo wizhi_banner_image() ; ?>" alt="">`
 
 then upload  **banner image** in page edit or category edit screen
 
@@ -42,7 +42,7 @@ then upload  **banner image** in page edit or category edit screen
 
 把下面的代码添加到 header.php
 
-`<?php if ( function_exists ("the_banner_images") ) { the_banner_images(); } ?>`
+`<img src="<?php echo wizhi_banner_image() ; ?>" alt="">`
 
 然后在页面和分类编辑界面上传 **banner image**
 
@@ -52,12 +52,12 @@ then upload  **banner image** in page edit or category edit screen
 = For English user =
 1. Upload `wizhi-banner-images` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Add `<?php if ( function_exists ("the_banner_images") ) { the_banner_images(); } ?>` to header.php
+3. Add `<img src="<?php echo wizhi_banner_image() ; ?>" alt="">` to any position you need it.
 
 = 中文用户 =
 1. 上传插件到`/wp-content/plugins/` 目录
 2. 在插件管理菜单激活插件
-3. 把 `<?php if ( function_exists ("the_banner_images") ) { the_banner_images(); } ?>` 代码添加到header.php
+3. 把 `<img src="<?php echo wizhi_banner_image() ; ?>" alt="">` 代码添加任何你需要的地方
 
 == Frequently Asked Questions ==
 
@@ -71,6 +71,7 @@ Screenshots is here：[http://www.wpzhiku.com/wizhi-submenus/](http://www.wpzhik
 
 = 1.1 =
 * Add l10n support
+* return img src instead of echo it
 
 = 1.0 =
 * The first released

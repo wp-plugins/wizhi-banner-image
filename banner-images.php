@@ -3,7 +3,7 @@
 Plugin Name:        Wizhi banner images
 Plugin URI:         http://www.wpzhiku.com/
 Description:        Display diffrent banner images in page and taxonomy terms，为每个页面或分类显示一个banner背景图
-Version:            1.0
+Version:            1.1
 Author:             Amos Lee
 Author URI:         http://www.wpzhiku.com/
 License:            MIT License
@@ -16,14 +16,13 @@ Text Domain:        wizhi
 
 <?php
 
-    /**
-    * Load translations
-    */
-    add_action('plugins_loaded', 'wizhi_banner_load_textdomain');
-    function wizhi_banner_load_textdomain() {
-        load_plugin_textdomain( 'wizhi', false, basename(dirname(__FILE__)) . '/lang/' );
-    }
-
+  /**
+  * Load translations
+  */
+  add_action('plugins_loaded', 'wizhi_banner_load_textdomain');
+  function wizhi_banner_load_textdomain() {
+      load_plugin_textdomain( 'wizhi', false, basename(dirname(__FILE__)) . '/lang/' );
+  }
 
 	//get all custom taxonomy
 	add_filter('piklist_add_part', 'wizhi_assign_all_public_tax', 10, 2);
@@ -109,11 +108,9 @@ Text Domain:        wizhi
 
 		$subimg_src = wp_get_attachment_url( $subimg );
 
-		if ( $subimg_src ) { ?>
-
-			<div class="wizhi-subimg" style="background:url('<?php echo $subimg_src; ?>'); width:100%; height:80px;"></div>
-
-		<?php }
+		if ( $subimg_src ) {
+      return $subimg_src;
+    }
 
 	}
 	
